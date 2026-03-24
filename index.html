@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Teutonic Knights — The Crusaders Who Conquered the North</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+</head>
+<body class="text-gray-200 font-crimson">
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500" style="background: rgba(13,13,13,0.0);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#hero" class="font-cinzel text-gold font-bold text-lg tracking-wider">✠ Deutscher Orden</a>
+        <div class="hidden md:flex items-center space-x-6 text-sm font-inter">
+          <a href="#origins" class="nav-link text-gray-400 hover:text-gold transition-colors">Origins</a>
+          <a href="#military" class="nav-link text-gray-400 hover:text-gold transition-colors">Holy Army</a>
+          <a href="#empire" class="nav-link text-gray-400 hover:text-gold transition-colors">Empire</a>
+          <a href="#malbork" class="nav-link text-gray-400 hover:text-gold transition-colors">Malbork</a>
+          <a href="#symbolism" class="nav-link text-gray-400 hover:text-gold transition-colors">Symbolism</a>
+          <a href="#grunwald" class="nav-link text-gray-400 hover:text-gold transition-colors">Grunwald</a>
+          <a href="#survival" class="nav-link text-gray-400 hover:text-gold transition-colors">Survival</a>
+          <a href="#timeline" class="nav-link text-gray-400 hover:text-gold transition-colors">Timeline</a>
+          <a href="#redacted" class="nav-link text-gray-400 hover:text-gold transition-colors">Files</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-gold">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-darkStone/95 backdrop-blur-md border-t border-gold/20">
+      <div class="px-4 py-3 space-y-2 font-inter text-sm">
+        <a href="#origins" class="block py-2 text-gray-400 hover:text-gold">Origins</a>
+        <a href="#military" class="block py-2 text-gray-400 hover:text-gold">Holy Army</a>
+        <a href="#empire" class="block py-2 text-gray-400 hover:text-gold">Empire</a>
+        <a href="#malbork" class="block py-2 text-gray-400 hover:text-gold">Malbork</a>
+        <a href="#symbolism" class="block py-2 text-gray-400 hover:text-gold">Symbolism</a>
+        <a href="#grunwald" class="block py-2 text-gray-400 hover:text-gold">Grunwald</a>
+        <a href="#survival" class="block py-2 text-gray-400 hover:text-gold">Survival</a>
+        <a href="#timeline" class="block py-2 text-gray-400 hover:text-gold">Timeline</a>
+        <a href="#redacted" class="block py-2 text-gray-400 hover:text-gold">Files</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-black via-darkStone to-black"></div>
+    <div class="absolute inset-0 opacity-10" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1920&q=80'); background-size: cover; background-position: center;"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black"></div>
+
+    <!-- Corner frames -->
+    <div class="absolute top-8 left-8 w-20 h-20 border-t-2 border-l-2 border-gold/30 hidden lg:block"></div>
+    <div class="absolute top-8 right-8 w-20 h-20 border-t-2 border-r-2 border-gold/30 hidden lg:block"></div>
+    <div class="absolute bottom-8 left-8 w-20 h-20 border-b-2 border-l-2 border-gold/30 hidden lg:block"></div>
+    <div class="absolute bottom-8 right-8 w-20 h-20 border-b-2 border-r-2 border-gold/30 hidden lg:block"></div>
+
+    <!-- Classification markers -->
+    <div class="absolute top-24 left-8 hidden lg:block">
+      <span class="file-label">Dossier Open</span>
+    </div>
+    <div class="absolute top-24 right-8 hidden lg:block">
+      <span class="file-label">Layered Archive</span>
+    </div>
+
+    <div class="relative z-10 text-center px-6 max-w-5xl">
+      <!-- Shield -->
+      <div class="hero-cross mb-8 flex justify-center">
+        <svg viewBox="0 0 200 240" class="w-40 h-48 sm:w-52 sm:h-60 shield-hover transition-all duration-500" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#F5F5F5;stop-opacity:1" />
+              <stop offset="50%" style="stop-color:#E8E8E8;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#D0D0D0;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="crossGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#1A1A1A;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#333333;stop-opacity:1" />
+            </linearGradient>
+            <filter id="shieldShadow" x="-10%" y="-10%" width="120%" height="120%">
+              <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+            </filter>
+          </defs>
+          <path d="M100 10 L185 40 L185 130 Q185 200 100 230 Q15 200 15 130 L15 40 Z" fill="url(#shieldGrad)" stroke="#C9A84C" stroke-width="3" filter="url(#shieldShadow)"/>
+          <path d="M100 22 L175 48 L175 130 Q175 192 100 218 Q25 192 25 130 L25 48 Z" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.4"/>
+          <rect x="85" y="45" width="30" height="140" rx="2" fill="url(#crossGrad)"/>
+          <rect x="45" y="90" width="110" height="30" rx="2" fill="url(#crossGrad)"/>
+          <polygon points="85,45 115,45 120,35 80,35" fill="url(#crossGrad)"/>
+          <polygon points="85,185 115,185 118,195 82,195" fill="url(#crossGrad)"/>
+          <polygon points="45,90 45,120 35,123 35,87" fill="url(#crossGrad)"/>
+          <polygon points="155,90 155,120 165,123 165,87" fill="url(#crossGrad)"/>
+        </svg>
+      </div>
+
+      <p class="font-mono text-gold/50 text-[0.65rem] tracking-[0.4em] uppercase mb-6 hero-tagline" style="animation-delay: 0.3s;">Order of Brothers of the German House of Saint Mary in Jerusalem</p>
+
+      <h1 class="hero-title font-cinzel text-4xl sm:text-6xl lg:text-7xl font-black text-white leading-tight tracking-wide">
+        The <span class="text-gold">Teutonic</span> Knights
+      </h1>
+
+      <div class="hero-tagline mt-6">
+        <p class="font-crimson text-xl sm:text-2xl lg:text-3xl italic text-gray-300" style="line-height:1.5;">
+          The Crusaders Who Conquered the North…<br class="hidden sm:inline">
+          <span class="text-gold/70">and the Layers of Power Still Buried in the South</span> ⚡️
+        </p>
+      </div>
+
+      <div class="hero-tagline mt-6" style="animation-delay: 0.9s;">
+        <p class="font-crimson text-base sm:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+          A machine of conquest, discipline, colonization, and administration — whose afterlives can be traced through every system that later inherited the same terrain, the same buildings, the same habits of control.
+        </p>
+      </div>
+
+      <div class="hero-tagline mt-6" style="animation-delay: 1.1s;">
+        <p class="font-mono text-xs text-gray-600 tracking-wide">1191 — Present &nbsp;·&nbsp; 835 Years of Institutional Memory</p>
+      </div>
+
+      <div class="hero-tagline mt-14" style="animation-delay: 1.4s;">
+        <a href="#origins" class="inline-block animate-bounce">
+          <svg class="w-6 h-6 text-gold/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ORIGINS ===================== -->
+  <section id="origins" class="relative py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="section-divider mb-16"></div>
+      <div class="animate-on-scroll">
+        <span class="file-label mb-4 block">File Note — Acre, 1191</span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-10">
+          The Birth of the <span class="text-blood">Black Cross</span>
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div class="animate-on-scroll space-y-6 text-lg text-gray-300 leading-relaxed">
+          <p>
+            <span class="text-2xl text-gold font-cinzel">T</span>he year is 1191. The Third Crusade is shredding the Levant. Richard the Lionheart sails east, Saladin holds Jerusalem, and outside the walls of Acre — a port city under months of grinding siege — German merchants from <strong class="text-white">Bremen and Lübeck</strong> are watching their countrymen bleed out on foreign sand. No organized care. No German hospital. No one coming.
+          </p>
+          <p>
+            So they strip the sails from their own ships, stitch them into tent canvas, and build a <em>field hospital</em> in the middle of a war zone. No charter. No papal order. Just two merchant crews who decided that if the dying had no one, they would be someone.
+          </p>
+          <p>
+            That improvised trauma ward became the <strong class="text-parchment">Hospital of St. Mary of the German House</strong> — and from that single act of emergency compassion, one of the most formidable military, administrative, and territorial machines in European history assembled itself, piece by piece, over the next century.
+          </p>
+        </div>
+
+        <div class="animate-on-scroll" style="transition-delay: 0.2s;">
+          <div class="rounded-lg overflow-hidden border border-gold/10">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Prise_de_Saint-Jean-d%27Acre_%281191%29.jpg" alt="The Capture of Acre, 1191 — medieval painting depicting the fall of the city during the Third Crusade" class="w-full h-auto object-cover" loading="lazy">
+          </div>
+          <p class="text-xs text-gray-600 mt-3 font-inter text-center">The Capture of Acre, 1191 — public domain, Wikimedia Commons</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FROM HOSPITAL TO HOLY ARMY ===================== -->
+  <section id="military" class="relative py-24 lg:py-32 parchment-bg">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="section-divider mb-16"></div>
+      <div class="animate-on-scroll">
+        <span class="file-label mb-4 block">Personnel Shift — 1198–1209</span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-10">
+          From Hospital to <span class="text-gold">Holy Army</span>
+        </h2>
+      </div>
+
+      <div class="animate-on-scroll space-y-6 text-lg text-gray-300 leading-relaxed max-w-3xl">
+        <p>
+          Eight years separated the tent hospital from the war machine. By 1198, the German brothers had reorganized into a <strong class="text-white">full military order</strong>, modeling their structure on two templates: the <em>Knights Templar</em> for battlefield doctrine and the <em>Knights Hospitaller</em> for the charitable mission they refused to abandon. The merger was deliberate — heal and fight, pray and govern, in a single organizational body.
+        </p>
+        <p>
+          Discipline was total. The Rule dictated sleeping arrangements, meal times, prayer hours, combat readiness. Individual will dissolved into collective function. It was a system designed to produce operatives — men who obeyed without deviation and executed without hesitation.
+        </p>
+      </div>
+
+      <!-- White Mantle callout -->
+      <div class="animate-on-scroll mt-12 bg-white/[0.03] border border-gold/20 rounded-xl p-8 max-w-3xl">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center">
+            <span class="text-gold text-2xl">✠</span>
+          </div>
+          <div>
+            <h3 class="font-cinzel text-gold text-lg mb-2">The White Mantle</h3>
+            <p class="text-gray-300 leading-relaxed">
+              In <strong class="text-white">1205</strong>, Pope Innocent III granted them their uniform: a <strong class="text-white">white mantle blazoned with a black cross</strong>. Simple. Stark. Unmistakable at two hundred yards. That black cross on white would become one of the most durable visual identifiers in European history — a brand, in the modern sense, eight centuries before the word existed.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hermann von Salza -->
+      <div class="animate-on-scroll mt-16 grid lg:grid-cols-5 gap-10 items-center">
+        <div class="lg:col-span-2">
+          <div class="rounded-lg overflow-hidden border border-gold/10">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Hermann_von_Salza.jpg" alt="Grand Master Hermann von Salza — historical portrait" class="w-full h-auto object-cover" loading="lazy">
+          </div>
+        </div>
+        <div class="lg:col-span-3 space-y-5 text-lg text-gray-300 leading-relaxed">
+          <h3 class="font-cinzel text-2xl text-white">Hermann von Salza: The Grand Master Who Redrew the Map</h3>
+          <p>
+            <strong class="text-gold">Hermann von Salza</strong> held the Grand Mastership from 1209 to 1239 — thirty years that bent the trajectory of Northern Europe. While other crusader commanders burned resources trying to hold indefensible positions in Palestine, von Salza read the situation coldly and pivoted the entire Order <em>north</em>.
+          </p>
+          <p>
+            His instrument was not primarily the sword. It was the <strong class="text-gold">Golden Bull of Rimini</strong> (1226), extracted from Emperor Frederick II, which granted the Order sovereign authority over any territory it could seize and hold in Prussia. On paper, a legal document. In practice, a license to build a state.
+          </p>
+          <p>
+            Polish Duke Konrad of Masovia had invited the Knights to deal with pagan raids on his border. He expected mercenaries. He got nation-builders.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EMPIRE ===================== -->
+  <section id="empire" class="relative py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="section-divider mb-16"></div>
+      <div class="animate-on-scroll">
+        <span class="file-label mb-4 block">Archive Trace — The Baltic Crusades</span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-10">
+          Empire of the <span class="text-blood">Sword</span> & <span class="text-gold">Cross</span>
+        </h2>
+      </div>
+
+      <div class="animate-on-scroll space-y-6 text-lg text-gray-300 leading-relaxed max-w-3xl">
+        <p>
+          What followed was not a campaign. It was a replacement. The Teutonic Knights did not merely defeat the Old Prussians — they dismantled their world. Fortresses went up. Settlements were planted. German-speaking colonists arrived in organized waves. The language of administration changed. The gods changed. The law changed. The land was surveyed, parceled, recorded, and governed.
+        </p>
+        <p>
+          <strong class="text-white">Prussia, Livonia, and Estonia</strong> fell under the Order's control, territory by territory, castle by castle. The result was the <strong class="text-gold">Monastic State of the Teutonic Order</strong> — a sovereign political entity run by a religious military corporation, answering to no king, managing its own treasury, minting its own coins, controlling Baltic trade routes.
+        </p>
+      </div>
+
+      <!-- Territory cards -->
+      <div class="animate-on-scroll mt-14 grid sm:grid-cols-3 gap-6">
+        <div class="bg-white/[0.02] border border-gold/10 rounded-xl p-6 text-center hover:border-gold/30 transition-all duration-300">
+          <div class="text-4xl font-cinzel font-bold text-gold mb-2">Prussia</div>
+          <p class="text-gray-400 font-inter text-sm">Conquered, colonized, administered. The indigenous population absorbed, displaced, or converted. An entirely new territorial order imposed on ancient ground.</p>
+        </div>
+        <div class="bg-white/[0.02] border border-gold/10 rounded-xl p-6 text-center hover:border-gold/30 transition-all duration-300">
+          <div class="text-4xl font-cinzel font-bold text-gold mb-2">Livonia</div>
+          <p class="text-gray-400 font-inter text-sm">Modern Latvia and southern Estonia — garrisoned, Christianized, and locked into the Order's economic network along the Baltic coast.</p>
+        </div>
+        <div class="bg-white/[0.02] border border-gold/10 rounded-xl p-6 text-center hover:border-gold/30 transition-all duration-300">
+          <div class="text-4xl font-cinzel font-bold text-gold mb-2">Estonia</div>
+          <p class="text-gray-400 font-inter text-sm">The northern edge of the Order's dominion — a crusader frontier where Europe's administrative grid met the forests of the unknown.</p>
+        </div>
+      </div>
+
+      <div class="animate-on-scroll mt-12 epic-quote bg-white/[0.02] border-l-4 border-gold/50 p-8 rounded-r-xl max-w-3xl">
+        <p class="text-xl italic text-gray-300 leading-relaxed">
+          A religious order — monks under vows of poverty — operated a sovereign nation. They raised armies, collected taxes, controlled shipping lanes, founded cities, and maintained a bureaucratic apparatus that would have impressed any secular kingdom of the era. The contradiction never seemed to trouble them.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MALBORK ===================== -->
+  <section id="malbork" class="relative py-24 lg:py-32 parchment-bg">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="section-divider mb-16"></div>
+      <div class="animate-on-scroll">
+        <span class="file-label mb-4 block">Site Transfer — The Fortress</span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+          Malbork: The <span class="text-blood">Monster</span> of Brick
+        </h2>
+        <p class="font-mono text-gold/50 text-xs mb-10 tracking-wider">UNESCO WORLD HERITAGE SITE &nbsp;·&nbsp; ACTIVE SINCE 1274</p>
+      </div>
+
+      <!-- Large castle image -->
+      <div class="animate-on-scroll mb-12">
+        <div class="rounded-xl overflow-hidden border border-gold/10">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Panorama_of_Malbork_Castle%2C_part_4.jpg" alt="Malbork Castle (Marienburg) — panoramic view of the massive red-brick fortress, one of the largest brick castles ever built" class="w-full h-auto object-cover" loading="lazy">
+        </div>
+        <p class="text-xs text-gray-600 mt-3 font-inter text-center">Malbork Castle, Poland — public domain, Wikimedia Commons</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div class="animate-on-scroll space-y-6 text-lg text-gray-300 leading-relaxed">
+          <p>
+            <span class="text-2xl text-gold font-cinzel">I</span>n 1309, the Order relocated its headquarters to a fortress so massive that visitors today still stop mid-sentence when they first see it. <strong class="text-white">Malbork Castle</strong> — <em>Marienburg</em> to the Germans who built it — sprawls across the banks of the Nogat River in modern Poland: three interlocking castle complexes covering over 52 acres, constructed almost entirely of <strong class="text-gold">handmade red brick</strong>.
+          </p>
+          <p>
+            Not stone. Brick. Millions of them. Fired, laid, mortared by hand into walls thick enough to absorb siege bombardment and vaulted halls tall enough to echo chanted prayers back to the men who sang them.
+          </p>
+        </div>
+        <div class="animate-on-scroll space-y-6 text-lg text-gray-300 leading-relaxed" style="transition-delay: 0.15s;">
+          <p>
+            Inside: the Grand Master's residence, governing chambers, a garrison chapel dedicated to the Virgin Mary, refectories with soaring Gothic ceilings, armories, granaries, and enough provisions storage to withstand a siege measured in months, not days. This was not just a military installation. It was an administrative capital built to project permanence.
+          </p>
+          <p>
+            Malbork survived the Order, survived the Prussian kingdom that inherited it, survived two world wars, and stands today as a <strong class="text-gold">UNESCO World Heritage Site</strong>. The buildings remained after the flags changed — a pattern worth noting.
+          </p>
+        </div>
+      </div>
+
+      <!-- Castle stats -->
+      <div class="animate-on-scroll mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="text-center p-5 border border-gold/10 rounded-lg bg-black/20">
+          <div class="text-2xl sm:text-3xl font-cinzel font-bold text-gold">1309</div>
+          <p class="text-gray-500 font-inter text-xs mt-1">Became HQ</p>
+        </div>
+        <div class="text-center p-5 border border-gold/10 rounded-lg bg-black/20">
+          <div class="text-2xl sm:text-3xl font-cinzel font-bold text-gold">52</div>
+          <p class="text-gray-500 font-inter text-xs mt-1">Acres</p>
+        </div>
+        <div class="text-center p-5 border border-gold/10 rounded-lg bg-black/20">
+          <div class="text-2xl sm:text-3xl font-cinzel font-bold text-gold">3</div>
+          <p class="text-gray-500 font-inter text-xs mt-1">Castle complexes</p>
+        </div>
+        <div class="text-center p-5 border border-gold/10 rounded-lg bg-black/20">
+          <div class="text-2xl sm:text-3xl font-cinzel font-bold text-gold">UNESCO</div>
+          <p class="text-gray-500 font-inter text-xs mt-1">World Heritage</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SYMBOLISM ===================== -->
+  <section id="symbolism" class="relative py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="section-divider mb-16"></div>
+      <div class="animate-on-scroll">
+        <span class="file-label mb-4 block">Symbol Analysis</span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-10">
+          The <span class="text-gold">Black Cross</span> Explained
+        </h2>
+      </div>
+
+      <div class="animate-on-scroll max-w-3xl space-y-6 text-lg text-gray-300 leading-relaxed mb-14">
+        <p>
+          Every durable institution builds itself a symbol. The Templars chose a red cross. The Hospitallers, white on black. The Teutonic Knights stripped it further: a <strong class="text-white">black cross on a white field</strong>. No ornamentation. No gilding. Two colors and a shape — and eight centuries of weight behind it.
+        </p>
+      </div>
+
+      <!-- Symbolism cards -->
+      <div class="space-y-8">
+        <!-- The Cross -->
+        <div class="animate-on-scroll bg-white/[0.02] border border-gold/15 rounded-xl overflow-hidden">
+          <div class="grid md:grid-cols-5 items-stretch">
+            <div class="md:col-span-2 bg-gradient-to-br from-black to-midStone flex items-center justify-center p-10">
+              <svg viewBox="0 0 120 120" class="w-32 h-32" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="0" width="120" height="120" fill="#F0F0F0" rx="4"/>
+                <rect x="47" y="10" width="26" height="100" rx="1" fill="#1A1A1A"/>
+                <rect x="10" y="42" width="100" height="26" rx="1" fill="#1A1A1A"/>
+                <polygon points="47,10 73,10 78,3 42,3" fill="#1A1A1A"/>
+                <polygon points="47,110 73,110 78,117 42,117" fill="#1A1A1A"/>
+                <polygon points="10,42 10,68 3,73 3,37" fill="#1A1A1A"/>
+                <polygon points="110,42 110,68 117,73 117,37" fill="#1A1A1A"/>
+              </svg>
+            </div>
+            <div class="md:col-span-3 p-8 space-y-4">
+              <h3 class="font-cinzel text-2xl text-gold">The Black Cross on White Shield</h3>
+              <p class="text-gray-300 leading-relaxed">
+                The cross is Christianity's central marker — the Order's entire justification compressed into a shape. But this is not a cathedral cross. It's <strong class="text-white">angular, flared, aggressive</strong> — a cross that communicates mission, not meditation. It was designed to be read at distance, in dust, in chaos.
+              </p>
+              <p class="text-gray-300 leading-relaxed">
+                The <strong class="text-white">black</strong> carries the weight of sacrifice, mortality, and the willingness to die on command. These men took vows knowing the probable outcome. The darkness of the cross is the darkness they accepted.
+              </p>
+              <p class="text-gray-300 leading-relaxed">
+                The <strong class="text-white">white field</strong> is its counterpoint: purity, total submission to divine purpose, the erasure of personal will. Together, the contrast is engineered — the stain of mortal sacrifice set against the blinding clarity of institutional mission.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- The White Mantle -->
+        <div class="animate-on-scroll bg-white/[0.02] border border-gold/15 rounded-xl overflow-hidden">
+          <div class="grid md:grid-cols-5 items-stretch">
+            <div class="md:col-span-3 p-8 space-y-4 order-2 md:order-1">
+              <h3 class="font-cinzel text-2xl text-gold">The White Mantle</h3>
+              <p class="text-gray-300 leading-relaxed">
+                The white mantle — granted by Pope Innocent III in 1205 — functioned as a <strong class="text-white">theological uniform</strong>. White: the color of resurrection, of the unblemished lamb, of angelic intervention. Wearing it declared alignment with the divine — and separation from every other category of soldier.
+              </p>
+              <p class="text-gray-300 leading-relaxed">
+                On a 13th-century battlefield crowded with mud-colored wool and rusting mail, a formation of knights advancing in spotless white was a calculated psychological event. It said: <em>we are not mercenaries, we are not feudal levies — we are something else entirely.</em> Innocence made operational.
+              </p>
+            </div>
+            <div class="md:col-span-2 bg-gradient-to-br from-midStone to-black flex items-center justify-center p-10 order-1 md:order-2">
+              <div class="rounded-lg overflow-hidden w-full border border-gold/10 bg-gradient-to-br from-midStone to-black flex items-center justify-center p-8">
+                <svg viewBox="0 0 120 160" class="w-full max-w-[180px] h-auto" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Teutonic Knight simplified silhouette with mantle and cross -->
+                  <defs>
+                    <linearGradient id="mantleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#F0F0F0;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#C8C8C8;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                  <!-- Helm -->
+                  <rect x="42" y="5" width="36" height="32" rx="4" fill="#888" stroke="#666" stroke-width="1"/>
+                  <rect x="44" y="18" width="32" height="3" rx="1" fill="#555"/>
+                  <line x1="60" y1="5" x2="60" y2="37" stroke="#666" stroke-width="0.5"/>
+                  <!-- Face -->
+                  <circle cx="55" cy="50" r="8" fill="#D0B590"/>
+                  <circle cx="65" cy="50" r="8" fill="#D0B590"/>
+                  <!-- Body (armor) -->
+                  <rect x="35" y="58" width="50" height="45" rx="2" fill="#999" stroke="#777" stroke-width="1"/>
+                  <!-- Mantle -->
+                  <path d="M30 65 Q25 75 25 95 L25 150 L95 150 L95 95 Q95 75 90 65 Z" fill="url(#mantleGrad)" stroke="#AAA" stroke-width="1"/>
+                  <!-- Cross on mantle -->
+                  <rect x="54" y="90" width="12" height="40" fill="#1A1A1A" rx="1"/>
+                  <rect x="40" y="110" width="40" height="12" fill="#1A1A1A" rx="1"/>
+                  <!-- Arms/sword -->
+                  <rect x="20" y="75" width="10" height="35" fill="#999" stroke="#777" stroke-width="0.5"/>
+                  <rect x="90" y="75" width="10" height="35" fill="#999" stroke="#777" stroke-width="0.5"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Golden Wealth -->
+        <div class="animate-on-scroll bg-white/[0.02] border border-gold/15 rounded-xl overflow-hidden">
+          <div class="grid md:grid-cols-5 items-stretch">
+            <div class="md:col-span-2 bg-gradient-to-br from-black to-midStone flex items-center justify-center p-10">
+              <svg viewBox="0 0 100 100" class="w-32 h-32" xmlns="http://www.w3.org/2000/svg">
+                <!-- Stylized wealth/treasury symbol -->
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#FFD700" stroke-width="2"/>
+                <g fill="#FFD700">
+                  <circle cx="30" cy="35" r="6"/>
+                  <circle cx="50" cy="25" r="6"/>
+                  <circle cx="70" cy="35" r="6"/>
+                  <circle cx="35" cy="60" r="6"/>
+                  <circle cx="65" cy="60" r="6"/>
+                  <circle cx="50" cy="70" r="8"/>
+                </g>
+                <path d="M50 15 L60 30 L50 50 L40 30 Z" fill="#FFD700" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="md:col-span-3 p-8 space-y-4">
+              <h3 class="font-cinzel text-2xl text-gold">The Golden Seal of Authority</h3>
+              <p class="text-gray-300 leading-relaxed">
+                The Teutonic Order did not renounce wealth — they <em>weaponized</em> it. Their treasury financed armies, fortifications, and the administrative apparatus of empire. Gold coins stamped with their seal circulated through the Baltic, a tangible assertion of legitimacy and power.
+              </p>
+              <p class="text-gray-300 leading-relaxed">
+                The contradiction between vows of poverty and actual material dominion was not resolved — it was simply operated. The Order was structured to contain paradox: monks who governed, the poor who owned territories, warriors bound by sacred oaths who executed ruthlessly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GRUNWALD ===================== -->
+  <section id="grunwald" class="relative py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="section-divider mb-16"></div>
+      <div class="animate-on-scroll">
+        <span class="file-label mb-4 block">Battle Record — July 15, 1410</span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-10">
+          Grunwald: The <span class="text-blood">Breaking Point</span>
+        </h2>
+      </div>
+
+      <div class="animate-on-scroll space-y-6 text-lg text-gray-300 leading-relaxed max-w-3xl mb-10">
+        <p>
+          For nearly two centuries, the Teutonic Order seemed unbeatable. Then, on July 15, 1410, at a place called Grunwald in East Prussia, the combined armies of Poland and Lithuania delivered what looked like a final blow.
+        </p>
+        <p>
+          The battle killed somewhere between 8,000 and 16,000 men — the casualty count is disputed, inflated by both sides for propaganda value. What's certain: the Grand Master, Ulrich von Jungingen, died in the fighting. Dozens of senior commanders fell with him. The Teutonic order lost the field, though not its state.
+        </p>
+      </div>
+
+      <!-- Battle cards -->
+      <div class="animate-on-scroll grid md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-white/[0.02] border border-gold/15 rounded-xl p-8">
+          <h3 class="font-cinzel text-gold text-lg mb-4">The Myth</h3>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            Grunwald entered popular memory as a kind of apocalypse — the moment when the Order's power was permanently broken. Polish and Lithuanian chronicles celebrated it as a definitive victory, the crusaders finally expelled from the East.
+          </p>
+          <p class="text-gray-300 leading-relaxed text-sm italic">
+            "The pride of the German knights was cast down into the dust of the battlefield."
+          </p>
+        </div>
+        <div class="bg-white/[0.02] border border-gold/15 rounded-xl p-8">
+          <h3 class="font-cinzel text-gold text-lg mb-4">The Reality</h3>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            The Teutonic Order survived Grunwald. It lost territory, paid indemnities, and its power waned. But the defeat was not total. The Order continued to govern Prussia for another century, adapting to a new political reality.
+          </p>
+          <p class="text-gray-300 leading-relaxed text-sm italic">
+            "The machine changed shape, but did not break."
+          </p>
+        </div>
+      </div>
+
+      <div class="animate-on-scroll epic-quote bg-white/[0.02] border-l-4 border-blood/50 p-8 rounded-r-xl max-w-3xl">
+        <p class="text-xl italic text-gray-300 leading-relaxed">
+          Grunwald was not the end of the Teutonic Knights. It was the moment when their universal power — the idea that they could expand infinitely, that no coalition could resist them — shattered. What remained was still formidable, but no longer invulnerable.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SURVIVAL & LEGACY ===================== -->
+  <section id="survival" class="relative py-24 lg:py-32 parchment-bg">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="section-divider mb-16"></div>
+      <div class="animate-on-scroll">
+        <span class="file-label mb-4 block">Post-Dissolution Archive</span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-10">
+          After the Order: <span class="text-gold">The Long Shadow</span>
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div class="animate-on-scroll space-y-6 text-lg text-gray-300 leading-relaxed">
+          <p>
+            The Teutonic Knights as a sovereign power ended in the early 19th century, dissolved by Napoleon and the tide of modernity. But the Order itself — the organization — never fully ceased to exist. It was reconstituted, reformed, internationalized. Today, it operates as a <em>charitable Catholic organization</em>, headquartered in Vienna.
+          </p>
+          <p>
+            The members wear black robes instead of white mantles. They run hospitals instead of fortresses. The equipment is entirely different. Yet the chain of institutional memory is unbroken — an organization claiming continuous succession from 1191 to the present day.
+          </p>
+        </div>
+
+        <div class="animate-on-scroll space-y-6 text-lg text-gray-300 leading-relaxed">
+          <p>
+            More significantly, the Prussian state that emerged from the Order's territories inherited its patterns of governance, its administrative practices, and its fundamental logic: organization as an instrument of power, territory as an extension of institutional will, control as a value in itself.
+          </p>
+          <p>
+            The buildings remained. The rules of governance persisted. Even after the flags changed and the borders shifted, the systems the Teutonic Order built continued to structure the territories they had claimed. The machine outlasted the Order.
+          </p>
+        </div>
+      </div>
+
+      <div class="animate-on-scroll mt-12 space-y-6">
+        <h3 class="font-cinzel text-2xl text-gold">Key Dates in Decline and Transformation</h3>
+        <div class="space-y-3">
+          <div class="bg-white/[0.02] border border-gold/10 rounded-lg p-4 flex items-start gap-4">
+            <span class="text-gold font-cinzel font-bold flex-shrink-0">1410</span>
+            <p class="text-gray-300"><strong>Battle of Grunwald</strong> — military defeat but not immediate dissolution</p>
+          </div>
+          <div class="bg-white/[0.02] border border-gold/10 rounded-lg p-4 flex items-start gap-4">
+            <span class="text-gold font-cinzel font-bold flex-shrink-0">1525</span>
+            <p class="text-gray-300"><strong>Prussian Reformation</strong> — Grand Master Albert secularizes the Order's lands, becomes Duke of Prussia</p>
+          </div>
+          <div class="bg-white/[0.02] border border-gold/10 rounded-lg p-4 flex items-start gap-4">
+            <span class="text-gold font-cinzel font-bold flex-shrink-0">1809</span>
+            <p class="text-gray-300"><strong>Napoleonic Wars</strong> — the Order loses its last territories, reorganizes as a purely religious entity</p>
+          </div>
+          <div class="bg-white/[0.02] border border-gold/10 rounded-lg p-4 flex items-start gap-4">
+            <span class="text-gold font-cinzel font-bold flex-shrink-0">1834</span>
+            <p class="text-gray-300"><strong>Revival in Vienna</strong> — the Order refounds itself as a charitable organization, Austrian-headquartered</p>
+          </div>
+          <div class="bg-white/[0.02] border border-gold/10 rounded-lg p-4 flex items-start gap-4">
+            <span class="text-gold font-cinzel font-bold flex-shrink-0">Present</span>
+            <p class="text-gray-300"><strong>Modern continuation</strong> — 900+ years of institutional memory, now focused on healthcare and charity</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TIMELINE ===================== -->
+  <section id="timeline" class="relative py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="section-divider mb-16"></div>
+      <div class="animate-on-scroll">
+        <span class="file-label mb-4 block">Chronological Archive</span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-10">
+          835 Years: <span class="text-gold">A Timeline</span>
+        </h2>
+      </div>
+
+      <!-- Full Timeline -->
+      <div class="animate-on-scroll space-y-4">
+        <div class="relative pl-8 border-l-2 border-gold/30">
+          <div class="absolute w-4 h-4 bg-gold rounded-full -left-2.5 top-1.5"></div>
+          <div class="mb-6">
+            <span class="text-gold font-cinzel font-bold">1191</span>
+            <p class="text-gray-300">German merchants establish a field hospital in Acre during the Third Crusade</p>
+          </div>
+        </div>
+        <div class="relative pl-8 border-l-2 border-gold/30">
+          <div class="absolute w-4 h-4 bg-gold rounded-full -left-2.5 top-1.5"></div>
+          <div class="mb-6">
+            <span class="text-gold font-cinzel font-bold">1198</span>
+            <p class="text-gray-300">The order reorganizes into a full military institution, adopting Templar and Hospitaller structures</p>
+          </div>
+        </div>
+        <div class="relative pl-8 border-l-2 border-gold/30">
+          <div class="absolute w-4 h-4 bg-gold rounded-full -left-2.5 top-1.5"></div>
+          <div class="mb-6">
+            <span class="text-gold font-cinzel font-bold">1205</span>
+            <p class="text-gray-300">Pope Innocent III grants them their white mantle with black cross — the iconic symbol</p>
+          </div>
+        </div>
+        <div class="relative pl-8 border-l-2 border-gold/30">
+          <div class="absolute w-4 h-4 bg-gold rounded-full -left-2.5 top-1.5"></div>
+          <div class="mb-6">
+            <span class="text-gold font-cinzel font-bold">1226</span>
+            <p class="text-gray-300">Golden Bull of Rimini grants the Order sovereign authority over conquered Baltic territories</p>
+          </div>
+        </div>
+        <div class="relative pl-8 border-l-2 border-gold/30">
+          <div class="absolute w-4 h-4 bg-gold rounded-full -left-2.5 top-1.5"></div>
+          <div class="mb-6">
+            <span class="text-gold font-cinzel font-bold">1274</span>
+            <p class="text-gray-300">Malbork Castle becomes the Order's headquarters — construction of the massive brick fortress begins</p>
+          </div>
+        </div>
+        <div class="relative pl-8 border-l-2 border-gold/30">
+          <div class="absolute w-4 h-4 bg-gold rounded-full -left-2.5 top-1.5"></div>
+          <div class="mb-6">
+            <span class="text-gold font-cinzel font-bold">1309</span>
+            <p class="text-gray-300">Relocation to Malbork complete — the Order's capital is now one of the largest castles in Europe</p>
+          </div>
+        </div>
+        <div class="relative pl-8 border-l-2 border-gold/30">
+          <div class="absolute w-4 h-4 bg-gold rounded-full -left-2.5 top-1.5"></div>
+          <div class="mb-6">
+            <span class="text-gold font-cinzel font-bold">1410</span>
+            <p class="text-gray-300">Battle of Grunwald — decisive defeat by Polish-Lithuanian coalition. The Order's universal power ends</p>
+          </div>
+        </div>
+        <div class="relative pl-8 border-l-2 border-gold/30">
+          <div class="absolute w-4 h-4 bg-gold rounded-full -left-2.5 top-1.5"></div>
+          <div class="mb-6">
+            <span class="text-gold font-cinzel font-bold">1525</span>
+            <p class="text-gray-300">Reformation — Grand Master Albert secularizes the Order's Prussian holdings, becomes Duke</p>
+          </div>
+        </div>
+        <div class="relative pl-8 border-l-2 border-gold/30">
+          <div class="absolute w-4 h-4 bg-gold rounded-full -left-2.5 top-1.5"></div>
+          <div class="mb-6">
+            <span class="text-gold font-cinzel font-bold">1809</span>
+            <p class="text-gray-300">Napoleonic Wars — the Order loses its last territorial holdings, becomes purely religious</p>
+          </div>
+        </div>
+        <div class="relative pl-8 border-l-2 border-gold/30">
+          <div class="absolute w-4 h-4 bg-gold rounded-full -left-2.5 top-1.5"></div>
+          <div class="mb-6">
+            <span class="text-gold font-cinzel font-bold">1834</span>
+            <p class="text-gray-300">Austrian revival — the Order refounds itself as a Catholic charitable organization in Vienna</p>
+          </div>
+        </div>
+        <div class="relative pl-8 border-l-2 border-gold/30">
+          <div class="absolute w-4 h-4 bg-gold rounded-full -left-2.5 top-1.5"></div>
+          <div class="mb-6">
+            <span class="text-gold font-cinzel font-bold">2026</span>
+            <p class="text-gray-300">Present — the Teutonic Order continues to operate globally as a healthcare and charitable organization, 835 years after its founding</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REDACTED/SOURCES ===================== -->
+  <section id="redacted" class="relative py-24 lg:py-32 parchment-bg">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="section-divider mb-16"></div>
+      <div class="animate-on-scroll">
+        <span class="file-label mb-4 block">Classified References</span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-10">
+          Sources & Further <span class="text-gold">Inquiry</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl">
+        <div class="animate-on-scroll">
+          <h3 class="font-cinzel text-gold text-lg mb-4">Primary Sources</h3>
+          <ul class="space-y-3 text-gray-300">
+            <li class="text-sm">
+              <strong class="text-white">The Rule of the Teutonic Order</strong> — The governing document, various translations available
+            </li>
+            <li class="text-sm">
+              <strong class="text-white">Malbork Castle Archives</strong> — Administrative records, preserved in Poland
+            </li>
+            <li class="text-sm">
+              <strong class="text-white">The Chronicles of the Teutonic Order</strong> — Medieval and early modern records
+            </li>
+            <li class="text-sm">
+              <strong class="text-white">Papal Correspondence</strong> — Bulls and letters from various popes authorizing and regulating the Order
+            </li>
+          </ul>
+        </div>
+
+        <div class="animate-on-scroll">
+          <h3 class="font-cinzel text-gold text-lg mb-4">Secondary Scholarship</h3>
+          <ul class="space-y-3 text-gray-300">
+            <li class="text-sm">
+              <strong class="text-white">Crusade and Conversion</strong> — Essays on Baltic Crusades and the religious military orders
+            </li>
+            <li class="text-sm">
+              <strong class="text-white">The Teutonic Order in the Holy Roman Empire</strong> — Political and territorial history
+            </li>
+            <li class="text-sm">
+              <strong class="text-white">Malbork: Castle of the Orders</strong> — Architectural and archaeological studies
+            </li>
+            <li class="text-sm">
+              <strong class="text-white">Grunwald 1410: The Breaking of the Teutonic Knights</strong> — Military history and political consequences
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="animate-on-scroll mt-12 bg-white/[0.03] border border-gold/15 rounded-xl p-8 max-w-3xl">
+        <h3 class="font-cinzel text-gold text-lg mb-4">About This Document</h3>
+        <p class="text-gray-300 leading-relaxed text-sm mb-4">
+          This archive was compiled from publicly available historical sources, scholarly consensus, and archival records. The Teutonic Order's institutional memory spans 835 years of documented history, making it one of the longest-lasting military and administrative organizations in European history.
+        </p>
+        <p class="text-gray-300 leading-relaxed text-sm">
+          The layers of the Order — from crusader origins through imperial administration to modern charity — reveal how institutions survive transformation by maintaining core operational structures while adapting their stated purpose to new eras.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative py-12 border-t border-gold/10">
+    <div class="max-w-5xl mx-auto px-6 text-center text-gray-500 text-sm">
+      <p class="mb-2">The Teutonic Knights: A Historical Archive</p>
+      <p class="font-mono text-xs tracking-wider">Compiled 2026 — 835 Years of Institutional Memory</p>
+      <p class="mt-4 text-xs text-gray-600">This site uses historical materials and public domain sources. All images credited to Wikimedia Commons unless otherwise noted.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== SCRIPTS ===================== -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
